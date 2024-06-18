@@ -7,6 +7,7 @@ import uv.mx.proyecto_final_iskander.model.Materia;
 import uv.mx.proyecto_final_iskander.repository.MateriaRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MateriaService {
@@ -62,4 +63,16 @@ public class MateriaService {
         return null;
     }
 
+    public Materia modificarMateria(String idMateria, Materia materiaActualizada) {
+        Optional<Materia> materiaOpcional = materiaRepository.findById(idMateria);
+
+        if (materiaOpcional.isPresent()) {
+            Materia materia = materiaOpcional.get();
+            materia.setNombreMateria(materiaActualizada.getNombreMateria());
+            materia.setNombreMaestro(materiaActualizada.getNombreMaestro());
+            return materiaRepository.save(materia);
+        } else {
+            throw new RuntimeException("Materia no encontrada");
+        }
+    }
 }
