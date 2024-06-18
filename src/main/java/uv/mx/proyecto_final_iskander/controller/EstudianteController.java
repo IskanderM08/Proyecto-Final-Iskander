@@ -35,7 +35,7 @@ public class EstudianteController {
         return new ResponseEntity<>(estudianteService.mostrarEstudiantes(), HttpStatus.OK);
     }
 
-    @DeleteMapping("/estudiantesDelete")
+    @DeleteMapping("/estudiantesDelete/{idEstudiante}")
     public ResponseEntity<Void> eliminarEstudiante(@PathVariable String idEstudiante) {
         estudianteService.eliminarEstudiante(idEstudiante);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

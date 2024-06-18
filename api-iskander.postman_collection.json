@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "115fa4d0-d917-442a-8f06-fb1b2f06c0d7",
+		"name": "api-iskander",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34878474"
+	},
+	"item": [
+		{
+			"name": "AgregarEstudiante1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idEstudiante\": \"1\",\r\n    \"nombreEstudiante\": \"Iskander\",\r\n    \"numeroTelefonico\": \"9221755876\",\r\n    \"correoElectronico\": \"Iskander@uv.mx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/estudiantes/estudiantesAdd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estudiantes",
+						"estudiantesAdd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarEstudiante2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idEstudiante\": \"2\",\r\n    \"nombreEstudiante\": \"Jorge\",\r\n    \"numeroTelefonico\": \"9221775876\",\r\n    \"correoElectronico\": \"Jorge@uv.mx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/estudiantes/estudiantesAdd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estudiantes",
+						"estudiantesAdd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerTodos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estudiantes/estudiantesGetAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estudiantes",
+						"estudiantesGetAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerUno",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/estudiantes/estudiantesGet/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estudiantes",
+						"estudiantesGet",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estudiantes/estudiantesDelete/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estudiantes",
+						"estudiantesDelete",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarEstudiante",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idEstudiante\": \"1\",\r\n    \"nombreEstudiante\": \"Iskander\",\r\n    \"numeroTelefonico\": \"9221755876\",\r\n    \"correoElectronico\": \"IskanderMO@uv.mx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/estudiantes/estudiantesUpdate/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estudiantes",
+						"estudiantesUpdate",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarMateria1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idMateria\":\"1\",\r\n    \"nombreMateria\":\"Despliegue\",\r\n    \"nombreMaestro\":\"Vergara\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/materias/materiasAdd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"materias",
+						"materiasAdd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarMateria2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idMateria\":\"2\",\r\n    \"nombreMateria\":\"Procesos\",\r\n    \"nombreMaestro\":\"Patricia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/materias/materiasAdd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"materias",
+						"materiasAdd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerUna",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/materias/materiasGet/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"materias",
+						"materiasGet",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerTodas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/materias/materiasGetAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"materias",
+						"materiasGetAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarMateria",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/materias/materiasDelete/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"materias",
+						"materiasDelete",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarMateria",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idMateria\":\"1\",\r\n    \"nombreMateria\":\"Desarrollo de Aplicaciones\",\r\n    \"nombreMaestro\":\"Vergara\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/materias/materiasUpdate/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"materias",
+						"materiasUpdate",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

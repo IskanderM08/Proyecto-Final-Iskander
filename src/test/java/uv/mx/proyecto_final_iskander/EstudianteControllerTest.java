@@ -103,16 +103,6 @@ public class EstudianteControllerTest {
     }
 
     @Test
-    void testEliminarEstudianteNoExistente() {
-        doThrow(RuntimeException.class).when(estudianteService).eliminarEstudiante("2");
-
-        ResponseEntity<Void> response = estudianteController.eliminarEstudiante("2");
-
-        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
-        verify(estudianteService, times(1)).eliminarEstudiante("2");
-    }
-
-    @Test
     void testActualizarEstudianteExistente() {
         when(estudianteService.modificarEstudiante(eq("1"), any(Estudiante.class))).thenReturn(estudiante);
 

@@ -24,7 +24,7 @@ public class MateriaController {
         return new ResponseEntity<>(materiaService.agregarMateria(nuevaMateria), HttpStatus.CREATED);
     }
 
-    @GetMapping("/materiasGet")
+    @GetMapping("/materiasGet/{idMateria}")
     public ResponseEntity<Materia> buscarMateria(@PathVariable String idMateria) {
         Materia materia = materiaService.buscarMateria(idMateria);
         return materia != null ? new ResponseEntity<>(materia, HttpStatus.OK)
@@ -36,13 +36,13 @@ public class MateriaController {
         return new ResponseEntity<>(materiaService.mostrarMaterias(), HttpStatus.OK);
     }
 
-    @DeleteMapping("/materiasDelete")
+    @DeleteMapping("/materiasDelete/{idMateria}")
     public ResponseEntity<Void> eliminarMateria(@PathVariable String idMateria) {
         materiaService.eliminarMateria(idMateria);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @PutMapping("/materiasUpdate")
+    @PutMapping("/materiasUpdate/{idMateria}")
     public ResponseEntity<Materia> modificarMateria(@PathVariable String idMateria, @RequestBody MateriaDTO materiaActualizadaDTO) {
         Materia materiaActualizada = DTOAEntidad(materiaActualizadaDTO);
         Materia materia = materiaService.modificarMateria(idMateria, materiaActualizada);
@@ -53,7 +53,7 @@ public class MateriaController {
         }
     }
 
-    @PostMapping("/materiasInscribir")
+    @PostMapping("/materiasInscribir/{idMateria}")
     public ResponseEntity<Materia> inscribirEstudiante(@PathVariable String idMateria, @RequestBody Estudiante estudiante) {
         Materia materia = materiaService.inscribirEstudiante(idMateria, estudiante);
         if (materia != null) {
@@ -63,7 +63,7 @@ public class MateriaController {
         }
     }
 
-    @GetMapping("/materiasListarInscritos")
+    @GetMapping("/materiasListarInscritos/{idMateria}")
     public ResponseEntity<List<String>> listarEstudiantesInscritos(@PathVariable String idMateria) {
         List<String> estudiantesCursando = materiaService.listarEstudiantesInscritos(idMateria);
         if (estudiantesCursando != null) {
@@ -73,7 +73,7 @@ public class MateriaController {
         }
     }
 
-    @DeleteMapping("/materiasEliminarInscrito")
+    @DeleteMapping("/materiasEliminarInscrito/{idMateria}/{idEstudiante}")
     public ResponseEntity<Materia> eliminarEstudianteInscrito(@PathVariable String idMateria, @PathVariable String idEstudiante) {
         Materia materia = materiaService.eliminarEstudianteInscrito(idMateria, idEstudiante);
         if (materia != null) {
