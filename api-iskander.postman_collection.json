@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "115fa4d0-d917-442a-8f06-fb1b2f06c0d7",
 		"name": "api-iskander",
+		"description": "Prueba de los Métodos de la API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "34878474"
 	},
@@ -31,7 +32,8 @@
 						"estudiantes",
 						"estudiantesAdd"
 					]
-				}
+				},
+				"description": "Método para agregar un Estudiante"
 			},
 			"response": []
 		},
@@ -60,7 +62,8 @@
 						"estudiantes",
 						"estudiantesAdd"
 					]
-				}
+				},
+				"description": "Método para Agregar un Estudiante"
 			},
 			"response": []
 		},
@@ -80,7 +83,8 @@
 						"estudiantes",
 						"estudiantesGetAll"
 					]
-				}
+				},
+				"description": "Método para Obtener Todos los Estudiantes"
 			},
 			"response": []
 		},
@@ -113,7 +117,8 @@
 						"estudiantesGet",
 						"1"
 					]
-				}
+				},
+				"description": "Método para Obtener un Estudiante por su ID"
 			},
 			"response": []
 		},
@@ -134,7 +139,8 @@
 						"estudiantesDelete",
 						"2"
 					]
-				}
+				},
+				"description": "Método para Eliminar un Estudiante por su ID"
 			},
 			"response": []
 		},
@@ -164,7 +170,8 @@
 						"estudiantesUpdate",
 						"1"
 					]
-				}
+				},
+				"description": "Método para actualizar los datos de un Estudiante por su ID"
 			},
 			"response": []
 		},
@@ -193,7 +200,8 @@
 						"materias",
 						"materiasAdd"
 					]
-				}
+				},
+				"description": "Método para agregar una Materia"
 			},
 			"response": []
 		},
@@ -222,7 +230,8 @@
 						"materias",
 						"materiasAdd"
 					]
-				}
+				},
+				"description": "Método para agregar una Materia"
 			},
 			"response": []
 		},
@@ -243,7 +252,8 @@
 						"materiasGet",
 						"1"
 					]
-				}
+				},
+				"description": "Método para obtener una materia según su ID"
 			},
 			"response": []
 		},
@@ -263,7 +273,8 @@
 						"materias",
 						"materiasGetAll"
 					]
-				}
+				},
+				"description": "Método para obtener todas las Materias"
 			},
 			"response": []
 		},
@@ -284,7 +295,8 @@
 						"materiasDelete",
 						"2"
 					]
-				}
+				},
+				"description": "Método para eliminar una Materia por su ID"
 			},
 			"response": []
 		},
@@ -314,7 +326,8 @@
 						"materiasUpdate",
 						"1"
 					]
-				}
+				},
+				"description": "Método para actualizar los datos de una Materia por su ID"
 			},
 			"response": []
 		}
